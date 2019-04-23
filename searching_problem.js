@@ -1,17 +1,13 @@
 function search(arr,low,high) { 
-    
     if (low > high) 
        return; 
-  
     if (low==high) 
     { 
         console.log("The required element is %d ", arr[low]); 
         return; 
     } 
-  
     // Find the middle point
-    let mid = (low + high) / 2; 
-    console.log(mid);
+    let mid = (low + high) / 2;
     if (mid%2 == 0) { 
         if (arr[mid] == arr[mid+1]) 
             search(arr, mid+2, high); 
