@@ -66,3 +66,19 @@ Output = [
 {name: "data[96]", value: "tetw"} 
 ]
 
+/**
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+**/
+
+var twoSum = function(nums, target) {
+   let hashMap = {};
+   for(let index=0; index < nums; index++) {
+   if(hashMap[nums[index]] !== undefined) return (hashMap[nums[index]], index);
+    hashMap[target - nums[index]] = index; // store index as value. and target - current number as a key. 
+  }
+};
+
