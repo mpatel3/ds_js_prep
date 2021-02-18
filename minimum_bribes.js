@@ -19,6 +19,10 @@ function minimumBribes(q) {
         const diff = originalPosition - currentPosition;
         if(diff > 2) return console.log("Too chaotic");
         if(diff <= 0){
+            /**
+            * e.g. [1,2,3,6,4,5,7]
+            *
+            **/
             for(let i = Math.max(0, originalPosition - 1); i < currentPosition; i++){
                 const startingPosOfforwaredPerson = q[i] - 1;
                 if(startingPosOfforwaredPerson > originalPosition){
